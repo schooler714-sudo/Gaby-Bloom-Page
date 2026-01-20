@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaby Bloom | Catálogo de Maquillaje</title>
+    <style>
+        :root {
+            --rosado: #FFB7CE;
+            --celeste: #89CFF0;
+            --morado: #B19CD9;
+            --amarillo: #FFF9C4;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background-color: #fafafa;
+            color: #444;
+        }
+
+        header {
+            background-color: var(--rosado);
+            color: white;
+            text-align: center;
+            padding: 25px;
+            border-bottom: 5px solid var(--morado);
+        }
+
+        nav {
+            background-color: var(--morado);
+            padding: 12px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #inicio {
+            padding: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+            background: white;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .img-inicio {
+            float: left;
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            margin-right: 30px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            border: 4px solid var(--celeste);
+        }
+
+        /* --- SECCIÓN CATÁLOGO ORGANIZADO --- */
+        #catalogo {
+            padding: 50px 5%;
+        }
+
+        .titulo-seccion {
+            text-align: center;
+            color: var(--morado);
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .contenedor-grid {
+            display: grid;
+            /* Crea columnas automáticas que se ajustan al ancho de la pantalla */
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .tarjeta-producto {
+            background: white;
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: 0.3s;
+            border: 1px solid #eee;
+        }
+
+        .tarjeta-producto:hover {
+            transform: scale(1.03);
+            border-color: var(--rosado);
+        }
+
+        .tarjeta-producto img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            background-color: var(--amarillo); /* Color de fondo mientras carga */
+        }
+
+        .tarjeta-producto h3 {
+            font-size: 1rem;
+            margin: 15px 0 5px;
+            color: #333;
+        }
+
+        .tarjeta-producto .precio {
+            display: block;
+            color: #e91e63;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .btn-whatsapp {
+            display: inline-block;
+            background-color: #25d366;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Gaby Bloom</h1>
+        <p>Tu tienda de confianza en maquillaje y belleza</p>
+    </header>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <section id="inicio">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIzfSBUgpB-uADTCwfIQvzmnnQSdqitN9vPw&s" alt="Logo Gaby Bloom" class="img-inicio">
+        <h2>Bienvenida</h2>
+        <p>¡Holaa! Bienvenido a <strong>Gaby Bloom</strong>. Aquí puedes realizar tus pedidos al por mayor o al detal desde $100.000 COP.</p>
+        <p>Aceptamos pagos por <strong>Nequi</strong> y <strong>Daviplata</strong>. Hacemos envíos nacionales todos los lunes y jueves para que tus productos lleguen lo más pronto posible. 🚚✨</p>
+    </section>
+
+    <section id="catalogo">
+        <h2 class="titulo-seccion">Catálogo de Productos</h2>
+        
+        <div class="contenedor-grid">
+            
+            <div class="tarjeta-producto">
+                <img src="https://cocopinkstore.com/cdn/shop/files/IMG_2449-2-compressed-scaled.jpg?v=1757109954&width=1445" alt="Maquillaje">
+                <h3>Kit Bioaqua Vitamina C</h3>
+                <span class="precio">$50.000</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+
+            <div class="tarjeta-producto">
+                <img src="https://sumerlabs.com/default/image-tool-lambda?new-width=0&new-height=0&new-quality=25&url-image=https%3A%2F%2Fsumerlabs.com%2Fprod%2Fcatalogue%2F154cbc5e4d946424f50fad00823401af107ead0a%2Fba8db0f3-c7ed-4e0d-830e-54b8e7ca7308.jpg" alt="Maquillaje">
+                <h3>Kit Bioaqua  Avocado Bouncy Moisturizing</h3>
+                <span class="precio">$50.000</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+
+            <div class="tarjeta-producto">
+                <img src="https://www.kofrabeauty.com/cdn/shop/products/ad602cfa455545d0742e3943572fb811_b40479a5-6b7f-433a-bb8c-106a4726ee13.jpg?v=1705518072" alt="Maquillaje">
+                <h3>Kit Bioaqua Rose Hyaluronix Acid</h3>
+                <span class="precio">$50.000</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+
+            <div class="tarjeta-producto">
+                <img src="https://catalinavivas.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTAwNDYwOSwicHVyIjoiYmxvYl9pZCJ9fQ==--abeb09f7799d3ac4077b637351bcd12a7f62dd0d/kit-facial-arroz-bioaqua.webp?locale=es" alt="Maquillaje">
+                <h3>Kit Bioaqua Rice Raw Pulp Rejuvenating </h3>
+                <span class="precio">$50.000</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://b2ctrendy.vtexassets.com/assets/vtex.file-manager-graphql/images/23e65319-b811-4f28-85a0-d29dae9d6aeb___378717469942c9a2c8e132a6ef1cce0b.jpg" alt="Maquillaje">
+                <h3>BRILLO LIP OIL SANDIA</h3>
+                <span class="precio">$11.500</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://b2ctrendy.vtexassets.com/assets/vtex.file-manager-graphql/images/8c3964fa-07af-446a-9f99-a2362fd2a871___c20e48617c7ea949e6eec0b05d88c57d.jpg" alt="Maquillaje">
+                <h3>BRILLO HOLOGRAFICO STITCH</h3>
+                <span class="precio">$10.000</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://tucatalogodemaquillaje.com/wp-content/uploads/2025/10/rubor-trendy-02.jpg?v=1761157892e">
+                <h3>RUBOR EN BARRA BARBIE VAQUERA</h3>
+                <span class="precio">$12.300</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://www.magnacosmetics.co/wp-content/uploads/2025/06/49083y.jpg" alt="Maquillaje">
+                <h3>CONTORNO BARRA RUBOR</h3>
+                <span class="precio">$12.000</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://luegopagocdn.azureedge.net/content-process/products-images/prod/2023/f4286e15-2acf-4952-aff7-555b01b070d1.webp" alt="Maquillaje">
+                <h3>RUBOR EN CREMA STAR, tonos 01-02-03</h3>
+                <span class="precio">$11.900</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://b2ctrendy.vtexassets.com/arquivos/ids/161554/STN-RHT2202-1.jpg?v=638938099027400000" alt="Maquillaje">
+                <h3>RUBOR BAKED LUCKY</h3>
+                <span class="precio">$13.000</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://images.rappi.com/products/1733153861046_f5e0669c-b8f4-426b-ac61-8c150491f15b_IMG_20241202_103101.jpg" alt="Maquillaje">
+                <h3>KIT X 4ILUMINADOR DREAMS</h3>
+                <span class="precio">$12.500</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://b2ctrendy.vtexassets.com/assets/vtex.file-manager-graphql/images/0c0e0465-b58a-4508-aa07-d3d641ae092a___0dfbe3a6a1cc9b4adfa432430407cd6f.jpg" alt="Maquillaje">
+                <h3>ILUMINADOR PIN UP</h3>
+                <span class="precio">$12.500</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://cocopinkstore.com/cdn/shop/files/161898-1200-auto.webp?v=1761275509&width=1445" alt="Maquillaje">
+                <h3>RUBOR DOBLE MIA</h3>
+                <span class="precio">$22.000</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZyL3rNkWvOUT_QMRBcYio-wHJbhkuukGl4Q&s" alt="Maquillaje">
+                <h3>RUBOR E ILUMINADOR PUPPY COLLECTION</h3>
+                <span class="precio">$12.800</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://http2.mlstatic.com/D_Q_NP_737757-MLA93869995428_102025-O.webp" alt="Maquillaje">
+                <h3>TORRE RUBOR, ILUMINADOR Y CONTORNO CAT FACE</h3>
+                <span class="precio">$12.500</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpgs3kVFDlZcEbVTPFWh2ktyjyx76QzbIJzw&s" alt="Maquillaje">
+                <h3>BRILLO DE LABIOS AURA, tono 1-5-6</h3>
+                <span class="precio">$16.000</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr5DmTW-BzKc7BCmWP0ESVWDgAuIAKhrg25Q&s" alt="Maquillaje">
+                <h3>GLOSS BARBIE VAQUERA tono 6-7-8</h3>
+                <span class="precio">$11.700</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://b2ctrendy.vtexassets.com/arquivos/ids/160718/STN-KBT1484-1.jpg.jpg?v=638889038298670000" alt="Maquillaje">
+                <h3>KIT DE LABIOS TIGER LIPS</h3>
+                <span class="precio">$30.000</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://www.collarela.com/cdn/shop/products/TINTAFRUTASTRENDY01_1200x1200.jpg?v=1685494891" alt="Maquillaje">
+                <h3>TINTA FRUTAS TRENDY</h3>
+                <span class="precio">$7.800</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://b2ctrendy.vtexassets.com/assets/vtex.file-manager-graphql/images/ee7e0ec7-f9d3-44ae-9fa1-cd8f7d438b72___27eae31b50485d895f8f8afa26f563a4.jpg" alt="Maquillaje">
+                <h3>BRILLO COTTON CANDY</h3>
+                <span class="precio">$12.400</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://b2ctrendy.vtexassets.com/assets/vtex.file-manager-graphql/images/8fa2b386-cc5a-46dc-90fe-4c883a40ff16___3ce83d9951837abb54455a20da77b5a4.jpg" alt="Maquillaje">
+                <h3>BRILLO GLOSS HAPPY BERRY</h3>
+                <span class="precio">$12.300</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://b2ctrendy.vtexassets.com/assets/vtex.file-manager-graphql/images/d768defe-6716-46ec-8072-764b623f8c78___fe288a91ba8a38f7deb0f69596403e20.jpg" alt="Maquillaje">
+                <h3>DELINEADORES DE LABIOS LOVE LIPS TRENDY</h3>
+                <span class="precio">$6.200</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://b2ctrendy.vtexassets.com/arquivos/ids/161871/STN-MT2379-1.jpg?v=638956520650270000" alt="Maquillaje">
+                <h3>PESTAÑINA BARBIE VAQUERA</h3>
+                <span class="precio">$12.000</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZyL3rNkWvOUT_QMRBcYio-wHJbhkuukGl4Q&s" alt="Maquillaje">
+                <h3>RUBOR E ILUMINADOR PUPPY COLLECTION</h3>
+                <span class="precio">$12.800</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://www.collarela.com/cdn/shop/files/161511-1200-auto_900x.jpg?v=1757354012" alt="Maquillaje">
+                <h3>KIT DUO PESTAÑINA + FORTELECE GOLD</h3>
+                <span class="precio">$16.000</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZyL3rNkWvOUT_QMRBcYio-wHJbhkuukGl4Q&s" alt="Maquillaje">
+                <h3>PESTAÑINA PASTEL A PRUEBA DE AGUAN</h3>
+                <span class="precio">$12.600</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://www.collarela.com/cdn/shop/files/161874-1200-auto_900x.jpg?v=1760633243" alt="Maquillaje">
+                <h3>GEL FIJADOR CEJAS BARBIE VAQUERA</h3>
+                <span class="precio">$8.200</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://images.rappi.com/products/1723866340123_1723866337529_1723866337562.jpeg" alt="Maquillaje">
+                <h3>SOMBRA CHOCOLATE</h3>
+                <span class="precio">$12.000</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqG7-rWosc4CJ_dr1iCQSUGD2CTh69-4OYvw&s" alt="Maquillaje">
+                <h3>SOMBRA RAINBOW TRENDY</h3>
+                <span class="precio">$20.000</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://kromaspace.com/wp-content/uploads/2024/09/paleta-sombra-frutas-trendy-1.jpg" alt="Maquillaje">
+                <h3>SOMBRA FRUTAS FRESA- UVA- COCO</h3>
+                <span class="precio">$12.600</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://b2ctrendy.vtexassets.com/arquivos/ids/157601/STN-SCT1278-1.jpg?v=638633336338300000" alt="Maquillaje">
+                <h3>SOMBRA CANDY TRENDY</h3>
+                <span class="precio">$13.000</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://b2ctrendy.vtexassets.com/arquivos/ids/162674/Ctt2229-CTT2229--2-1.jpg?v=639014079527370000" alt="Maquillaje">
+                <h3>CORRECTOR DE OJERAS AURAN</h3>
+                <span class="precio">$16.000</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://b2ctrendy.vtexassets.com/arquivos/ids/161558/MG11-Tono-00-1.jpg?v=638938117698870000" alt="Maquillaje">
+                <h3>CORRECTOR MAGIC GRANDE</h3>
+                <span class="precio">$21.800</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://b2ctrendy.vtexassets.com/arquivos/ids/161448/STN-RBT1769-1.jpg?v=638927108250500000" alt="Maquillaje">
+                <h3>CONTORNO Y RUBOR BAKERY</h3>
+                <span class="precio">$12.000</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj5oOQBXGtdCb8vgGLqF26PL39N0fL4guDdQ&s" alt="Maquillaje">
+                <h3>ILUMINADOR HORNEADO CHOCOLATE</h3>
+                <span class="precio">$12.600</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://www.collarela.com/cdn/shop/files/ESTANDAR-PH03_1_jpg_900x.jpg?v=1750882831" alt="Maquillaje">
+                <h3>POLVO DE HADAS TRENDY 15GR</h3>
+                <span class="precio">$9.600</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://b2ctrendy.vtexassets.com/assets/vtex.file-manager-graphql/images/6f710f32-5a23-46f3-a633-c447fcca7a66___9f499c52cbd31db59ab31f386736d140.jpg" alt="Maquillaje">
+                <h3>FIJADOR RETRO FACE</h3>
+                <span class="precio">$12.400</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToBnRt2Ap7OuKf3M52pAE4Pv_Dv9Fne4LKyw&s" alt="Maquillaje">
+                <h3>ESPONJA PANDA</h3>
+                <span class="precio">$8.200</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://b2ctrendy.vtexassets.com/arquivos/ids/160283/STN-KBC2097-1.jpg.jpg?v=638774898735500000" alt="Maquillaje">
+                <h3>KIT BORLAS COTTON</h3>
+                <span class="precio">$6.300</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmIIGnmgt06iXy65ZdmldKpAx4stych5IPBw&s" alt="Maquillaje">
+                <h3>ACEITE DESMAQUILLANTE- SKYN DOYPACK</h3>
+                <span class="precio">$7.800</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+                <img src="https://b2ctrendy.vtexassets.com/arquivos/ids/160164/STN-BTT2162-1.jpg.jpg?v=638774791630970000" alt="Maquillaje">
+                <h3>BORLA TRIANGULAR MORADA</h3>
+                <span class="precio">$3.800</span>
+                <a href="#" class="btn-whatsapp">Pedir</a>
+            </div>
+            <div class="tarjeta-producto">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvS2Vv3_RUYkefROxYtqOUobXoiffvuNpQQg&s" alt="Producto">
+    <h3>KIT BROCHAS CEJAS ORGáNICAS X2</h3>
+    <span class="precio">$8.000</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQZtgG6x75WOr_OEvpWDitkVK2vr-PpROa5g&s" alt="Producto">
+    <h3>BROCHA INDIVIDUAL DOBLE PIEL</h3>
+    <span class="precio">$12.600</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqiZZ8hv1dFYN6KcLpxt7UXI86tjvg7GUzdQ&s" alt="Producto">
+    <h3>ESPEJO RETRO</h3>
+    <span class="precio">$4.900</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3aBw_Cau4jGS6duDSrxEZ-INuvm9eDHwAJw&s" alt="Producto">
+    <h3>BALACA PUFFY</h3>
+    <span class="precio">$8.800</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://pandoramaquillaje.com/wp-content/uploads/2024/10/montaje-todas.jpeg" alt="Producto">
+    <h3>KIT BROCHA EVERYDAY x 12 UNIDADES</h3>
+    <span class="precio">$27.500</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://cdn.quicksell.co/-M787EBUaI9fKaF4omx-/products/-O2pxKbMD3tVcvfL5amb.jpg" alt="Producto">
+    <h3>BROCHA POLVO ANCHA</h3>
+    <span class="precio">$12.000</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4hbT4DqV3GEfSmfnIvQe8U9uPSV6X7HuXZQ&s" alt="Producto">
+    <h3>BROCHA INDIVIDUAL RUBOR</h3>
+    <span class="precio">$9.600</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://images.rappi.com/products/1729866996327_1729866979103_1729866978660.jpg" alt="Producto">
+    <h3>BROCHA INDIVIDUAL DOBLE ANGULAR Y GOTA</h3>
+    <span class="precio">$11.000</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+
+            <div class="tarjeta-producto">
+    <img src="https://www.collarela.com/cdn/shop/files/BROCHAINDIVIDUALLENGUAGATOMINIP2031_1200x1200.jpg?v=1692141748" alt="Producto">
+    <h3>BROCHA INDIVIDUAL TIPO LENGUA DE GATO </h3>
+    <span class="precio">$8.500</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://http2.mlstatic.com/D_NQ_NP_780595-MLA96179538561_102025-O.webp" alt="Producto">
+    <h3>SOMBRA BLOSSOM</h3>
+    <span class="precio">$12.500</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://surticosmeticosb2c.vtexassets.com/arquivos/ids/171591/U791101-Sombra-Trendy-Rock-SRT1287--01-3.jpg?v=638531341300700000" alt="Producto">
+    <h3>SOMBRA TRENDY ROCK</h3>
+    <span class="precio">$11.400</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://http2.mlstatic.com/D_NQ_NP_800154-MLA93977731979_102025-O.webp" alt="Producto">
+    <h3>SOMBRA PUPPY COLLECTION </h3>
+    <span class="precio">$12.000</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://b2ctrendy.vtexassets.com/arquivos/ids/160816/DSC03966.jpg.jpg?v=638786800852530000" alt="Producto">
+    <h3>POLVOS SUELTOS BANANA</h3>
+    <span class="precio">$12.500</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://b2ctrendy.vtexassets.com/arquivos/ids/157848/STN-CCT1870-1.jpg?v=638633337834970000" alt="Producto">
+    <h3>CONTORNO EN BARRA CHOCOLATE</h3>
+    <span class="precio">$5.300</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://b2ctrendy.vtexassets.com/arquivos/ids/162298/_DSC9327.jpg?v=638987379882600000" alt="Producto">
+    <h3>COCTEL DE CEJAS BETUN + POLVO</h3>
+    <span class="precio">$6.300</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://surticosmeticosb2c.vtexassets.com/arquivos/ids/170698-800-auto?v=638495651332070000&width=800&height=auto&aspect=true" alt="Producto">
+    <h3>BARRA MULTIPROPOSITO ROSTRO Y LABIO</h3>
+    <span class="precio">$7.000</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://www.collarela.com/cdn/shop/products/PESTANINAPROSAMAXIVOLUMEN01_900x.webp?v=1654825669" alt="Producto">
+    <h3>PESTAÑINA MAXI VOLUMEN</h3>
+    <span class="precio">$16.700</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzn4pSH09i9c7R_ennLQ5UJaKeojyWIXuAaA&s" alt="Producto">
+    <h3>Nombre del Producto</h3>
+    <span class="precio">$16.700</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjBYIWmhR5eneN1sEN-yhoCliY8XDa8i_iKg&s" alt="Producto">
+    <h3>PESTAÑINA ALARGADORAS PROFESIONAL</h3>
+    <span class="precio">$16.700</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFGYVPQf8VK9IqDlSKZll5cSURMnSm98q2XA&s" alt="Producto">
+    <h3>PESTAÑINA PROFESIONAL SILICON</h3>
+    <span class="precio">$16.700</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwzcMTLRCmdm9EDU3mppTqii3fh52VE-nQAw&s" alt="Producto">
+    <h3>PESTAÑINA PROFESIONAL SILICON CAFÉ</h3>
+    <span class="precio">$16.700</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://www.collarela.com/cdn/shop/products/PESTANINAPROSAMAXIVOLUMEN01_900x.webp?v=1654825669" alt="Producto">
+    <h3>PESTAÑINA MAXI VOLUMEN</h3>
+    <span class="precio">$16.700</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://tutiendaprama.com/wp-content/uploads/2024/08/D_Q_NP_690766-MLU71501791728_092023-O.jpg" alt="Producto">
+    <h3>Nombre del Producto</h3>
+    <span class="precio">$16.500</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPPFSsd_xWDGA_u1ynf8QPKvwxzmskATPd1g&s" alt="Producto">
+    <h3>DELINEADOR CAFÉ</h3>
+    <span class="precio">$17.000</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpLk6bsbw58KapzOgZ5Y-ndxcku0LDetD3bA&s" alt="Producto">
+    <h3>TRATAMIENTO PARA PESTAÑAS</h3>
+    <span class="precio">$17.300</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://surticosmeticosb2c.vtexassets.com/arquivos/ids/173814/ZA1405-Aceite-Fortalecedor-de-Pestanas-Prosa-15ml-1.jpg.jpg?v=638766151319270000" alt="Producto">
+    <h3>ACEITE FORTALECEDOR</h3>
+    <span class="precio">$19.900</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://ushascosmetics.com/cdn/shop/files/8_1800x1800.jpg?v=1736573577" alt="Producto">
+    <h3>PESTAÑINA USHAS</h3>
+    <span class="precio">$8.000</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1OgDDsVRdnesREPPKgMRG06EiTn0ueTthJA&s" alt="Producto">
+    <h3>LAPIZ DE CEJAS DOBLE SERVICIO</h3>
+    <span class="precio">$4.900</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://d2k4simfy5dbs2.cloudfront.net/eyJidWNrZXQiOiJjYXNhbmRyYS1zdGF0aWMiLCJrZXkiOiJwcm9kdWN0cy8zNDg0NC84MDk1Ni5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEwMDAsImhlaWdodCI6MTAwMH19fQ==" alt="Producto">
+    <h3>JABON FIJADOR DE CEJAS</h3>
+    <span class="precio">$5.900</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://cdnx.jumpseller.com/moda-outlet-por-mayor/image/67423880/resize/640/640?1757391279" alt="Producto">
+    <h3>RUBOR EN BARRA</h3>
+    <span class="precio">$10.600</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://lolybeautyshop.com/cdn/shop/files/6924372635247.jpg?v=1758904835&width=1946" alt="Producto">
+    <h3>SELLADOR DE MAQUILLAJE</h3>
+    <span class="precio">$10.400</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1gu716BN1f67GHSUuhxu0pPOvSiq61wJJ9A&s" alt="Producto">
+    <h3>DESMAQUILLADOR FACIAL</h3>
+    <span class="precio">$15.200</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmcy3ph9ICoL5i-V8iQJ4dEO5mCnLtIpHUUg&s" alt="Producto">
+    <h3>SOMBRA DE CEJAS EN POLVO</h3>
+    <span class="precio">$7.950</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://pandoramaquillaje.com/wp-content/uploads/2025/10/Photoroom_20251011_183307.jpg" alt="Producto">
+    <h3>ILUMINADOR FACIAL</h3>
+    <span class="precio">$7.200</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://cdn.quicksell.co/-Nq8gtWJp3YDmXekYWIZ/products/-OeyTAB-AOCYdXrFCfuY.jpg" alt="Producto">
+    <h3>CORRECTOR FACIAL</h3>
+    <span class="precio">$9.100</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR-L6_Bt__PkdVakZPHvFZTPO9MpE5RDFoWhtjM5C2r1XOZTjte" alt="Producto">
+    <h3>GLAM BERRYS</h3>
+    <span class="precio">$12.000</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://engolcollections.com/wp-content/uploads/2025/03/LPRB-35-30.jpg" alt="Producto">
+    <h3>RUBOR LIQUIDO</h3>
+    <span class="precio">$12.000</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://engolcollections.com/wp-content/uploads/2024/05/145-1-scaled.jpg" alt="Producto">
+    <h3>LIP YUMBO OIL</h3>
+    <span class="precio">$6.300</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://engolcollections.com/wp-content/uploads/2025/10/glow-197.jpg" alt="Producto">
+    <h3>LABIAL LIQUIDO EFECTO MATTE </h3>
+    <span class="precio">$8.800</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeHT5ORJlaUWxzkKtWChkRGGqvs-JJ3ZXT-w&s" alt="Producto">
+    <h3>LABIAL EFECTO MATTE SAKURA</h3>
+    <span class="precio">$7.200</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://engolcollections.com/wp-content/uploads/2025/09/101-4-scaled.jpg" alt="Producto">
+    <h3>GLAM BERRYS</h3>
+    <span class="precio">$9.600</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://engolcollections.com/wp-content/uploads/2025/03/LPRB-35-63.jpg" alt="Producto">
+    <h3>RUBOR BUTTER</h3>
+    <span class="precio">$8.800</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://cocopinkstore.com/cdn/shop/files/PALETA-MACCHIATO-1-2.jpg?v=1757117391&width=1445" alt="Producto">
+    <h3>PALETA DE SOMBRAS MACCHIATO</h3>
+    <span class="precio">$18.150</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPUh2AckINbqtXSwCbGBpmCCHZVsS_ESmN5A&s" alt="Producto">
+    <h3>BALSAMO LABIAL BUNNY BALM</h3>
+    <span class="precio">$4.000</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://engolcollections.com/wp-content/uploads/2025/09/261-scaled.jpg" alt="Producto">
+    <h3>COSMETIQUERRA BERRY</h3>
+    <span class="precio">$20.000</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROdNm3cbCESKyE9GDTu0pFNXQLyWwu7-HhAg&s" alt="Producto">
+    <h3>COSMETIQUERA VELVET</h3>
+    <span class="precio">$20.000</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://engolcollections.com/wp-content/uploads/2024/05/SHA-818T2.jpg" alt="Producto">
+    <h3>SOMBRAS KIT CORAZON</h3>
+    <span class="precio">$11.200</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://pandoramaquillaje.com/wp-content/uploads/2025/09/Photoroom_20250927_151939.jpg" alt="Producto">
+    <h3>}TINTA PARA LABIOS</h3>
+    <span class="precio">$5.600</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcEtAx7PlrUiDYJ-QyXDTdaPgrHMXwcv4XkA&s" alt="Producto">
+    <h3>DUO BORLAS</h3>
+    <span class="precio">$3.100</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE6I_LfxyAuxeiSu59UHZ9ssb36kfaCoFxXA&s" alt="Producto">
+    <h3>TRIO BLENDERS</h3>
+    <span class="precio">$8.000</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyyqGjWm-bQdP7YWXlNLwOiHW7vnZRKKppyw&s" alt="Producto">
+    <h3>BALACA ANIMALITOS </h3>
+    <span class="precio">$5.600</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://pandoramaquillaje.com/wp-content/uploads/2025/06/Photoroom_20251114_161439.jpg" alt="Producto">
+    <h3>COSMETIQUERA BLOOM</h3>
+    <span class="precio">$12.800</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQjyV7PvEwrlSZxr-Hp73HcM-d-3_arWWqEPEtQc2owkhShscy4" alt="Producto">
+    <h3>COSMETIQUERA X2 UNIDADES</h3>
+    <span class="precio">$20.000</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://cdn.quicksell.co/-MfPr_Uz0H4kQvQEjEL_/products/-OKmy4Ewx6sCEYCH8omT.jpg" alt="Producto">
+    <h3>ENCRESPADOR</h3>
+    <span class="precio">5.600</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+            <div class="tarjeta-producto">
+    <img src="https://dreamoncosmetics.com/cdn/shop/files/Anadir-un-subtitulo-2024-10-01T181551.692.webp?v=1746904152" alt="Producto">
+    <h3>DELINEADOR NEGRO</h3>
+    <span class="precio">$8.000</span>
+    <a href="#" class="btn-whatsapp">Pedir</a>
+</div>
+                 </div>
+    </section>
+    <section id="contacto" style="background-color: var(--amarillo); border-radius: 30px; margin: 40px 5%; padding: 40px; box-shadow: 0 10px 20px rgba(0,0,0,0.05);">
+        <h2 style="text-align: center; color: var(--morado); font-size: 2rem;">¿Tienes dudas o quieres hacer un pedido?</h2>
+        <p style="text-align: center; font-size: 1.1rem; margin-bottom: 30px;">Estamos listos para atenderte por cualquiera de estos medios:</p>
+
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px; text-align: center;">
+            
+            <div style="flex: 1; min-width: 200px;">
+                <div style="font-size: 30px;">📱</div>
+                <h3 style="color: #25d366;">WhatsApp</h3>
+                <a href="https://wa.me/573000000000" target="_blank" style="text-decoration: none; color: #444; font-weight: bold; font-size: 1.1rem;">+57 310 297 1004</a>
+            </div>
+
+            <div style="flex: 1; min-width: 200px;">
+                <div style="font-size: 30px;">✉️</div>
+                <h3 style="color: var(--morado);">Correo</h3>
+                <a href="mailto:tuemail@ejemplo.com" style="text-decoration: none; color: #444; font-weight: bold; font-size: 1.1rem;">gabybloom@gmail.com</a>
+            </div>
+
+            <div style="flex: 1; min-width: 200px;">
+                <div style="font-size: 30px;">📸</div>
+                <h3 style="color: var(--rosado);">Instagram</h3>
+                <a href="https://instagram.com/tu_usuario" target="_blank" style="text-decoration: none; color: #444; font-weight: bold; font-size: 1.1rem;">@GabyBloom_Shop</a>
+            </div>
+
+            <div style="flex: 1; min-width: 200px;">
+                <div style="font-size: 30px;">📍</div>
+                <h3 style="color: var(--celeste);">Ubicación</h3>
+                <p style="color: #444; font-weight: bold; font-size: 1.1rem;">Bogotá, Colombia (Envíos nacionales)</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Gaby Bloom - Emprendimiento Colombiano 🇨🇴</p>
+    </footer>
+
+</body>
+</html>
